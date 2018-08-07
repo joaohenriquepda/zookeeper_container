@@ -1,9 +1,8 @@
 FROM openjdk:8u171-jdk-slim-stretch
 
-# #
+
 RUN apt-get update && \
     apt-get install -y software-properties-common wget git nano
-
 
 ENV ZOOKEEPER_VERSION 3.4.12
 
@@ -24,4 +23,4 @@ RUN sed  -i "s|/tmp/zookeeper|$ZK_HOME/data|g" $ZK_HOME/conf/zoo.cfg; mkdir $ZK_
 
 WORKDIR /opt
 
-RUN ./zookeeper-3.4.12/bin/zkServer.sh start-foreground
+# RUN ./zookeeper-3.4.12/bin/zkServer.sh start-foreground
