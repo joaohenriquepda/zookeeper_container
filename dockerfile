@@ -24,4 +24,4 @@ RUN sed  -i "s|/tmp/zookeeper|$ZK_HOME/data|g" $ZK_HOME/conf/zoo.cfg; mkdir $ZK_
 
 WORKDIR /opt
 
-# RUN ./zookeeper-3.4.12/bin/zkServer.sh start-foreground
+RUN ./zookeeper-3.4.12/bin/zkServer.sh start-foreground
