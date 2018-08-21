@@ -1,5 +1,5 @@
 FROM openjdk:8u171-jdk-slim-stretch
-
+MAINTAINER João Henrique
 
 RUN apt-get update && \
     apt-get install -y software-properties-common wget git nano
