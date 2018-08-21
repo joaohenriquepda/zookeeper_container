@@ -21,6 +21,8 @@ ENV ZK_HOME /opt/zookeeper-${ZOOKEEPER_VERSION}
 #Mudando a linha no arquivo
 RUN sed  -i "s|/tmp/zookeeper|$ZK_HOME/data|g" $ZK_HOME/conf/zoo.cfg; mkdir $ZK_HOME/data
 
+# EXPOSE 2181 2888 3888
+
 WORKDIR /opt
 
 # RUN ./zookeeper-3.4.12/bin/zkServer.sh start-foreground
